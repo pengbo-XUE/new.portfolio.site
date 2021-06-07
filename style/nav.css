@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Farro', sans-serif;
+}
+
+
+:root {
+  --color1: #098aaf;
+  --color2: #F8F9FA;
+  --color3: #343A40;
+  --color4: #212529;
+  --color5: #353535;
+}
+html{
+  scroll-behavior: smooth;
+}
+.copyright{
+  text-align: center;
+}
+.foot-main-text{
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar {
+    height: 80px;
+    margin-top: 20px;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    width: 90%;
+    z-index: 999;
+    border: balck solid 3px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.navbar.hide {
+	top: -80px;
+  transition: all 0.5s ease;
+}
+
+.navbar__container{
+  display: flex;
+  justify-content:space-between;
+  height: 80px;
+  z-index:1;
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
+  
+}
+
+#navbar__logo{
+  background-color:var(--color3) ;
+  /* background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%); */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  -moz-text-fill-color:transparent;
+  font-family:'Farro', sans-serif;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 3rem;
+}
+.fa-laptop-code{
+  margin-right: 0.5rem;
+}
+.navbar__menu{ /*i think this is the entire menu item*/
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+.navbar__item{  /*this just targets the links but not the button*/
+  height: 80px;
+}
+.navbar__links{
+  color: var(--color3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  font-family: 'DotGothic16', sans-serif;
+  font-weight: bold;
+}
+
+.navbar__links:hover{
+  color:var(--color5);
+}
+
+.navbar__btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  height: 100%;
+}
+#signup__btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  width: 100%;
+  height: 50%;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: var(--color4);
+  color: #fff;
+  font-family: 'DotGothic16', sans-serif;
+  font-weight:bold;
+  
+}  
+
+#signup__btn:hover{
+  background:  var(--color3);
+}
+
+@media screen and (max-width: 1400px){
+  .navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+  }
+  #search__logo{
+    opacity: 0;
+  }
+  .navbar__menu{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    border-radius:0px  0px 5px 5px;
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    height: 50rem;
+    z-index: -1;
+  }
+
+  .navbar__menu.active{
+    background: var(--color2);
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 30rem;
+    font-size: 1.6rem;
+    border-radius: 50px;
+ 
+  }
+  #navbar__logo{
+    padding-left: 25px;
+  }
+  .navbar__toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    
+  }
+  .navbar__item{
+    width: 100%;
+  }
+  .navbar__links{
+    text-align: center;
+    padding:2rem;
+    width: 100%;
+    height: auto;
+    display:table;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top:20%;
+    right:5%;
+    transform: translate(5%, 20%)
+  }
+
+  .navbar__btn{
+    padding-bottom:  2rem;
+  }
+
+   #signup__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  .navbar__toggle .bar{
+    background-color: var(--color1);
+    display: block;
+    cursor: pointer;
+  }
+
+  #mobile-menu.is-active .bar:nth-child(2){
+    opacity: 0;
+  }
+  
+  #mobile-menu.is-active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #mobile-menu.is-active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

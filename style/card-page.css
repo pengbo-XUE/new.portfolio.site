@@ -1,0 +1,23 @@
+.card-grid{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.rowtwo{
+    margin-top: 30px;
+}
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}
+.vid {
+    width: 80% !important;
+    height: 80% !important;
+   
+}
+.vid-con{
+    margin-top: 20px;
+     margin-left: 12% !important;
+    margin-right: auto !important;
+}

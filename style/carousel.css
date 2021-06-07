@@ -1,0 +1,10 @@
+.carousel{
+  width: 95% !important;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+} 
+#carousel-inner{
+    border: 1px solid black;
+}
